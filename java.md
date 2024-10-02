@@ -50,6 +50,7 @@ def GCD(a,b):
     return abs(dividend)  #  GCD는 양수이므로 절대값 명령어 abs()를 사용
 ```
 <hr>
+
 **푼 문제 정리**
 
 - 배열 만들기 2
