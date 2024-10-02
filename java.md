@@ -24,31 +24,6 @@
 > - Arrays.eqauls(배열a, 배열b); ->  a와 b의 인덱스들을 모두 비교
 > - stack (후입선출) 값추가: add(), push() / 값제거: pop() / 마지막 요소 : peek()
 
-
-
-> - java : 배열 만들기 2
-```
-import java.util.*;
-class Solution {
-    public int[] solution(int l, int r) {
-        List<Integer> list = new ArrayList<>();
-        String regx = "^[^12346789]*$";
-        for (int i = l; i <= r; i++) {
-            if (String.valueOf(i).matches(regx)) {
-                list.add(i);
-            }
-        }
-        if (list.size() > 0) {
-            int[] result = new int[list.size()];
-            for (int i = 0; i < list.size(); i++) {
-                result[i] = list.get(i);
-            }
-            return result;
-        }
-        return new int[]{-1};
-    }
-}
-```
 > - java : 배열을 리스트로, 리스트를 배열로
 ```
 // 1. 원본 배열
@@ -74,7 +49,34 @@ def GCD(a,b):
         divisor = remainder
     return abs(dividend)  #  GCD는 양수이므로 절대값 명령어 abs()를 사용
 ```
-> - java : 분수의 덧셈
+
+**푼 문제 정리**
+
+> - java : 배열 만들기 2
+```
+import java.util.*;
+class Solution {
+    public int[] solution(int l, int r) {
+        List<Integer> list = new ArrayList<>();
+        String regx = "^[^12346789]*$";
+        for (int i = l; i <= r; i++) {
+            if (String.valueOf(i).matches(regx)) {
+                list.add(i);
+            }
+        }
+        if (list.size() > 0) {
+            int[] result = new int[list.size()];
+            for (int i = 0; i < list.size(); i++) {
+                result[i] = list.get(i);
+            }
+            return result;
+        }
+        return new int[]{-1};
+    }
+}
+```
+
+> - 분수의 덧셈
 ```
 class Solution {
     public int[] solution(int numer1, int denom1, int numer2, int denom2) {
@@ -100,6 +102,30 @@ class Solution {
         int finalnum = numer / gcd;
         int[] answer = {finalnum, finalden};
         
+        return answer;
+    }
+}
+```
+> - 최댓값 만들기
+```
+import java.util.Arrays;
+class Solution {
+    public int solution(int[] numbers) {
+        int answer = 0;
+        int[] maxs = new int[numbers.length];
+        for(int i=0; i<numbers.length; i++){
+            int idx = 0;
+            int[] list = new int[numbers.length-1];
+            for(int j=0; j<list.length; j++){
+                 if(i!=j){
+                     list[idx++] = numbers[i] * numbers[j];
+                 }
+            }
+            Arrays.sort(list);
+            maxs[i] = list[numbers.length-2];
+        }
+        Arrays.sort(maxs);
+        answer = maxs[numbers.length-1];
         return answer;
     }
 }
