@@ -52,7 +52,7 @@ def GCD(a,b):
 
 **푼 문제 정리**
 
-> - java : 배열 만들기 2
+- 배열 만들기 2
 ```
 import java.util.*;
 class Solution {
@@ -76,7 +76,7 @@ class Solution {
 }
 ```
 
-> - 분수의 덧셈
+- 분수의 덧셈
 ```
 class Solution {
     public int[] solution(int numer1, int denom1, int numer2, int denom2) {
@@ -106,7 +106,7 @@ class Solution {
     }
 }
 ```
-> - 최댓값 만들기
+- 최댓값 만들기
 ```
 import java.util.Arrays;
 class Solution {
