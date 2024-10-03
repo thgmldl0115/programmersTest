@@ -1,1 +1,2 @@
 - int() <- 정수부분만 추출
+- import math / math.ceil() 올림 / math.floor() 버림
