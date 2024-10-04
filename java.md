@@ -5,6 +5,8 @@
 - import java.lang.Math;
 - import java.util.ArrayList;
 
+> "String"
+> 'char'
 
 > - 배열 정렬 : Arrays.sort(배열);
 > - 배열 자르기 : Arrays.copyOfRange(배열, 시작인덱스, 끝인덱스)
